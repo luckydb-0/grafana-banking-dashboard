@@ -1,0 +1,35 @@
+Queries and Visualization Type
+
+Rejected Transaction Count
+SELECT count(*) FROM banking_data WHERE decision = 'Rejected';
+Visualization Type: Stat
+
+Approved Transaction Count
+SELECT count(*) FROM banking_data WHERE decision = 'Approved';
+Visualization Type: Stat
+
+Total Approved Amount
+SELECT sum(amount) FROM banking_data WHERE decision = 'Approved';
+Visualization Type: Stat
+
+Rejected Transaction Amount
+SELECT sum(amount) FROM banking_data WHERE decision = 'Rejected';
+Visualization Type: Stat
+
+Transaction Types
+SELECT trans_type, count(*) FROM banking_data GROUP BY trans_type;
+Visualization Type: Pie Chart
+
+Rules Triggered
+SELECT rules_triggered, count(*)
+FROM banking_data
+WHERE trans_type = 'Real_time_transaction'
+GROUP BY rules_triggered;
+Visualization Type: Bar Chart
+
+Blacklisted Account Transactions
+SELECT account_id, count(*) AS blacklisted_accounts
+FROM banking_data
+WHERE account_blacklisted = TRUE
+GROUP BY account_id;
+Visualization Type: Bar Chart
