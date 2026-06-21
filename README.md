@@ -2,7 +2,7 @@
 
 This project generates synthetic banking transaction data, stores it in PostgreSQL, and visualizes the results in Grafana. It was built as a hands-on exercise to practice connecting a Python data generator, a relational database, and a monitoring dashboard.
 
-Public dashboard: [Grafana Banking Dashboard](https://boldmarigold1768.grafana.net/public-dashboards/9f4f0068f2b4451b82293427866800be)
+Public dashboard: [Grafana Banking Dashboard](https://boldmarigold1768.grafana.net/public-dashboards/9f4f0068f2b4451b82293427866800be) (The database, that was running on AWS, is currently down)
 
 ## Project Overview
 
